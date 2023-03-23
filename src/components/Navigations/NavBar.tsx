@@ -22,7 +22,7 @@ export const Navbar = () => {
             Icon: <IconLogout size={size} />,
             color: 'blue',
             label: 'Logout',
-            onClick: () => auth?.signOut(),
+            onClick: () => auth.signOut(),
         },
     ]
 

@@ -5,14 +5,14 @@
     "type": "module",
     "scripts": {
         "divider": "=============================basic======================================",
-        "setup": "npx -y husky install && npm i",
+        "setup": "npx -y husky install && rm -rf node_modules && npm i --force",
         "build": "vite build",
         "lint": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
         "pretty": "pretty-quick --stage --brach main",
         "tsc": "tsc",
         "divider1": "============================dev========================================",
-        "dev": "vite",
-        "preview": "npm run build && vite preview"
+        "dev": "cp -fr dev.env .env && vite",
+        "preview": "cp -fr dev.env .env && npm run build && vite preview"
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx,md,json,yml}": [
@@ -29,6 +29,7 @@
         "@ts-rest/core": "^3.18.1",
         "@ts-rest/react-query": "^3.18.1",
         "firebase": "^9.17.2",
+        "firelordjs": "^2.4.0",
         "localforage": "^1.10.0",
         "react": "^18.2.0",
         "react-audio-voice-recorder": "^1.0.4",
@@ -36,9 +37,11 @@
         "react-firebaseui": "^6.0.0",
         "react-router-dom": "^6.9.0",
         "react-social-login-buttons": "^3.6.1",
+        "zod": "^3.21.4",
         "zustand": "^4.3.6"
     },
     "devDependencies": {
+        "@firebase/rules-unit-testing": "^2.0.7",
         "@types/react": "^18.0.27",
         "@types/react-dom": "^18.0.10",
         "@typescript-eslint/eslint-plugin": "^5.55.0",
@@ -54,6 +57,7 @@
         "eslint-plugin-react-hooks": "^4.6.0",
         "eslint-plugin-unused-imports": "^2.0.0",
         "eslint-plugin-yml": "^1.4.0",
+        "jsdoc": "^4.0.2",
         "lint-staged": "^13.2.0",
         "prettier": "^2.6.2",
         "pretty-quick": "^3.1.3",
