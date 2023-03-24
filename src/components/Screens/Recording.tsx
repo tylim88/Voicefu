@@ -16,7 +16,6 @@ export const Recording = () => {
                         const formData = new FormData()
                         formData.append('userIdToken', user.uid)
                         formData.append('audioFile', blob)
-
                         queryClient.createTranscription.mutation({
                             body: formData,
                         })

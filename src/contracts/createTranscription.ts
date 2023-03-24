@@ -1,9 +1,11 @@
 import { z } from 'zod'
+import { c } from './init'
 
 export const createTranscription = {
     method: 'POST',
     path: '/api/createTranscription',
     summary: 'create whisper transcription',
+    contentType: 'multipart/form-data',
     responses: {
         200: z.object({
             translatedText: z.string(),
@@ -12,5 +14,5 @@ export const createTranscription = {
             message: z.string(),
         }),
     },
-    body: z.instanceof(FormData),
+    body: c.body<{ audioFile: File; userIdToken: string }>(),
 } as const
