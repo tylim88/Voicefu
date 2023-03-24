@@ -8,6 +8,7 @@ export const createTranscription = {
     contentType: 'multipart/form-data',
     responses: {
         200: z.object({
+            tokenUsage: z.number().min(0),
             translatedText: z.string(),
         }),
         401: z.object({
