@@ -88,17 +88,12 @@ export const Home = () => {
                             },
                         })}
                     />
-                    {url ? (
-                        <Flex justify='center'>
-                            <audio src={url} controls />
-                        </Flex>
-                    ) : null}
                     <Textarea
                         label={
                             <TextWithPopover
                                 text='Text To Speech&nbsp;'
                                 popoverText={` Currently only supports text to
-                                Japanese speech.`}
+                            Japanese speech.`}
                             />
                         }
                         value={translatedText}
@@ -116,6 +111,15 @@ export const Home = () => {
                         })}
                     />
 
+                    {url ? (
+                        <Flex justify='flex-start'>
+                            <audio src={url} controls />
+                        </Flex>
+                    ) : null}
+                    <Text>
+                        Token reset occurs at 00:00 UTC on the first day of
+                        every month
+                    </Text>
                     <Text>Token Usage: {tokenUsage}</Text>
                     {token !== undefined ? (
                         <Text>Available Tokens: {token}</Text>

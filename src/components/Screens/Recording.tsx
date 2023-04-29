@@ -14,13 +14,14 @@ export const Recording = ({
         base64Wav: string | null
     }) => void
 }) => {
-    const [blob, setBlob] = useState<Blob | null>(null)
+    const [url, setURL] = useState<string | null>(null)
     const auth = useFirebaseStore((state) => state.auth)
     return (
         <Stack align='center' justify='center'>
             <Notifications />
             <AudioRecorder
                 onRecordingComplete={async (blob) => {
+                    setURL(null)
                     notifications.show({
                         message: 'Translating',
                         loading: true,
@@ -31,7 +32,7 @@ export const Recording = ({
                             ?.getIdToken(true)
                             .then((idToken) => idToken)
                         if (idToken) {
-                            setBlob(blob)
+                            setURL(URL.createObjectURL(blob))
                             const formData = new FormData()
                             formData.append('userIdToken', idToken)
                             formData.append('audioFile', blob)
@@ -65,7 +66,7 @@ export const Recording = ({
                     }
                 }}
             />
-            {blob ? <audio src={URL.createObjectURL(blob)} controls /> : null}
+            {url ? <audio src={url} controls /> : null}
         </Stack>
     )
 }
