@@ -28,6 +28,7 @@
         "@tabler/icons-react": "^2.10.0",
         "@ts-rest/core": "^3.18.1",
         "@ts-rest/react-query": "^3.18.1",
+        "buffer": "^6.0.3",
         "firebase": "^9.17.2",
         "firelordjs": "^2.4.0",
         "localforage": "^1.10.0",

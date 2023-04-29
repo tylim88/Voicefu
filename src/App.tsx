@@ -28,8 +28,7 @@ export const App = () => {
         autoSignIn &&
             // this will run twice in dev mode because of react strict mode
             notifications.show({
-                title: 'Signing In',
-                message: 'Processing, please wait...',
+                message: 'Signing In',
                 loading: true,
             })
     }, [autoSignIn])

@@ -10,8 +10,13 @@ export const createTranscription = {
         200: z.object({
             tokenUsage: z.number().min(0),
             translatedText: z.string(),
+            transcription: z.string(),
+            base64Wav: z.string(),
         }),
         401: z.object({
+            message: z.string(),
+        }),
+        500: z.object({
             message: z.string(),
         }),
     },

@@ -6,13 +6,13 @@ import { Users } from '~/firebase_'
 import { getFirelord, getFirestore, FirelordRef } from 'firelordjs'
 
 export const useFirebaseStore = create<{
-    app: FirebaseApp
-    auth: Auth
+    app: FirebaseApp | null
+    auth: Auth | null
     fs: { users: FirelordRef<Users> }
     initialize: () => void
 }>((set) => ({
-    app: null!,
-    auth: null!,
+    app: null,
+    auth: null,
     fs: null!,
     initialize: () => {
         set((state) => {
