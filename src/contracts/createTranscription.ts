@@ -3,7 +3,7 @@ import { c } from './init'
 
 export const createTranscription = {
     method: 'POST',
-    path: '/api/createTranscription',
+    path: '/createTranscription',
     summary: 'create whisper transcription',
     contentType: 'multipart/form-data',
     responses: {
