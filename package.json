@@ -11,8 +11,8 @@
         "pretty": "pretty-quick --stage --brach main",
         "tsc": "tsc",
         "divider1": "============================dev========================================",
-        "dev": "cp -fr dev.env .env && vite",
-        "preview": "cp -fr dev.env .env && npm run build && vite preview"
+        "dev": "vite",
+        "preview": "npm run build && vite preview"
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx,md,json,yml}": [

@@ -3,6 +3,8 @@ on: [push]
 jobs:
     ci:
         runs-on: ubuntu-latest
+        env:
+            VITE_BASE_URL: https://api.voicefu.com
         if: github.ref == 'refs/heads/main'
         steps:
             - uses: actions/checkout@v3
