@@ -4,6 +4,8 @@ import { AudioRecorder } from 'react-audio-voice-recorder'
 import { queryClient } from '~/client'
 import { useFirebaseStore } from '~/stores'
 import { notifications } from '@mantine/notifications'
+import { GuideButton } from '../Buttons/Guide'
+
 export const Recording = ({
     onRecordingComplete,
 }: {
@@ -19,8 +21,9 @@ export const Recording = ({
     return (
         <Stack align='center' justify='center' mb='1.5rem'>
             <Title mb='1.5rem' align='center'>
-                Translate Your Speech Into Japanese
+                Translate Speech Into Japanese
             </Title>
+            <GuideButton mb='1.5rem' />
             <AudioRecorder
                 onRecordingComplete={async (blob) => {
                     setURL(null)
