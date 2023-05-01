@@ -28,7 +28,8 @@ export const Recording = ({
                 onRecordingComplete={async (blob) => {
                     setURL(null)
                     notifications.show({
-                        message: 'Translating',
+                        message:
+                            'Translating, please wait for around 15 seconds',
                         loading: true,
                         autoClose: false,
                     })
