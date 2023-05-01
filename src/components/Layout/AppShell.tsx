@@ -1,15 +1,16 @@
-import React from 'react'
+import { useState } from 'react'
 import { AppShell as AppShell_ } from '@mantine/core'
 import { Navbar } from '../Navigations'
 import { Header } from './Header'
 
 export const AppShell = ({ Screen }: { Screen: React.ReactNode }) => {
+    const [opened, setOpened] = useState(false)
     return (
         <AppShell_
-            padding='md'
-            fixed={false}
-            navbar={<Navbar />}
-            header={<Header />}
+            navbarOffsetBreakpoint='sm'
+            asideOffsetBreakpoint='sm'
+            navbar={<Navbar hidden={!opened} />}
+            header={<Header opened={opened} setOpened={setOpened} />}
             styles={(theme) => ({
                 main: {
                     backgroundColor:

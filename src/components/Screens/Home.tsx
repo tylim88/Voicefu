@@ -55,7 +55,7 @@ export const Home = () => {
                         label={
                             <TextWithPopover
                                 text='Speech To Text&nbsp;'
-                                popoverText={`Supported Languages: Afrikaans,
+                                popoverText={`Supported Speech to Text Languages: Afrikaans,
                         Arabic, Armenian, Azerbaijani,
                         Belarusian, Bosnian, Bulgarian,
                         Catalan, Chinese, Croatian, Czech,
@@ -92,7 +92,7 @@ export const Home = () => {
                         label={
                             <TextWithPopover
                                 text='Text To Speech&nbsp;'
-                                popoverText={` Currently only supports text to
+                                popoverText={`Only supports text to
                             Japanese speech.`}
                             />
                         }

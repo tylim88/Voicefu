@@ -1,4 +1,12 @@
-import { Group, Avatar, Text, Box, useMantineTheme, rem } from '@mantine/core'
+import {
+    Group,
+    Avatar,
+    Text,
+    Box,
+    useMantineTheme,
+    rem,
+    Flex,
+} from '@mantine/core'
 import { useUserStore } from '~/stores'
 
 export function User() {
@@ -6,7 +14,7 @@ export function User() {
     const theme = useMantineTheme()
 
     return user ? (
-        <Box
+        <Flex
             sx={{
                 display: 'block',
                 width: '100%',
@@ -19,17 +27,17 @@ export function User() {
                 }`,
             }}
         >
-            <Group>
+            <Group sx={{ flexWrap: 'nowrap', overflow: 'hidden' }}>
                 <Avatar src={user.photoURL} radius='xl' />
                 <Box sx={{ flex: 1 }}>
-                    <Text size='sm' weight={500}>
+                    <Text size='sm' weight={500} truncate='end'>
                         {user.displayName}
                     </Text>
-                    <Text color='dimmed' size='xs'>
+                    <Text color='dimmed' size='xs' truncate='end'>
                         {user.email}
                     </Text>
                 </Box>
             </Group>
-        </Box>
+        </Flex>
     ) : null
 }

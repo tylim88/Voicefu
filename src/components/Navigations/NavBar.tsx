@@ -7,7 +7,7 @@ const size = '1rem'
 
 type Links = React.ComponentProps<typeof NavLink>
 
-export const Navbar = () => {
+export const Navbar = ({ hidden }: { hidden: boolean }) => {
     const user = useUserStore((state) => state.user)
     const auth = useFirebaseStore((state) => state.auth)
 
@@ -40,7 +40,12 @@ export const Navbar = () => {
     ))
 
     return (
-        <Navbar_ width={{ base: 300 }} p='xs'>
+        <Navbar_
+            p='md'
+            hiddenBreakpoint='sm'
+            hidden={hidden}
+            width={{ sm: 200, lg: 300 }}
+        >
             <Navbar_.Section grow mt='xs'>
                 {links}
             </Navbar_.Section>
