@@ -41,8 +41,12 @@ export const Recording = ({
                                     body: formData,
                                 })
                                 .then((res) => {
+                                    notifications.clean()
                                     if (res.status === 200) {
                                         onRecordingComplete(res.body)
+                                        notifications.show({
+                                            message: 'Translation is complete',
+                                        })
                                     } else if (
                                         res.status === 401 ||
                                         res.status === 500
@@ -56,12 +60,19 @@ export const Recording = ({
                                             base64Wav: null,
                                         })
                                     }
+                                    if (res.status !== 200) {
+                                        notifications.show({
+                                            message:
+                                                'Error, please contact the author on github',
+                                        })
+                                    }
                                 })
                         }
-                    } finally {
+                    } catch (e) {
                         notifications.clean()
                         notifications.show({
-                            message: 'Translation is complete',
+                            message:
+                                'Error, please contact the author on github',
                         })
                     }
                 }}
