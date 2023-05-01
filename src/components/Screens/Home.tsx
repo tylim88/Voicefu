@@ -117,6 +117,9 @@ export const Home = () => {
                         </Flex>
                     ) : null}
                     <Text>
+                        1000 free tokens every month, 1 token = 0.75 word
+                    </Text>
+                    <Text>
                         Token reset occurs at 00:00 UTC on the first day of
                         every month
                     </Text>

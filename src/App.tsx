@@ -56,7 +56,7 @@ export const App = () => {
                 withNormalizeCSS
             >
                 <RouterProvider router={router} />
-                <Notifications />
+                <Notifications position='top-right' />
             </MantineProvider>
         </ColorSchemeProvider>
     )
