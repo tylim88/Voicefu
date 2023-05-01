@@ -4,7 +4,7 @@ import { LoginButton } from '../Buttons'
 export const Login = () => {
     return (
         <Stack>
-            <Text ta='center'>Demo App, free 1000 words per month</Text>
+            <Text ta='center'>Demo App, free 1000 tokens per month</Text>
             <LoginButton />
         </Stack>
     )

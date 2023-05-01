@@ -1,4 +1,3 @@
-// Import the functions you need from the SDKs you need
 export const firebaseConfig = {
     apiKey: 'AIzaSyC3jAjQzIxiDk66wr1w4GZcjXiIuoRinbY',
     authDomain: 'voicefu-2ed11.firebaseapp.com',
