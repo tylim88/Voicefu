@@ -1,4 +1,3 @@
-import { IconChevronRight, IconChevronLeft } from '@tabler/icons-react'
 import {
     UnstyledButton,
     Group,
@@ -54,12 +53,6 @@ export function User() {
                             {user.email}
                         </Text>
                     </Box>
-
-                    {theme.dir === 'ltr' ? (
-                        <IconChevronRight size={rem(18)} />
-                    ) : (
-                        <IconChevronLeft size={rem(18)} />
-                    )}
                 </Group>
             </UnstyledButton>
         </Box>
