@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { AudioRecorder } from 'react-audio-voice-recorder'
 import { queryClient } from '~/client'
 import { useFirebaseStore } from '~/stores'
-import { Notifications, notifications } from '@mantine/notifications'
+import { notifications } from '@mantine/notifications'
 export const Recording = ({
     onRecordingComplete,
 }: {
@@ -18,7 +18,6 @@ export const Recording = ({
     const auth = useFirebaseStore((state) => state.auth)
     return (
         <Stack align='center' justify='center'>
-            <Notifications />
             <AudioRecorder
                 onRecordingComplete={async (blob) => {
                     setURL(null)
