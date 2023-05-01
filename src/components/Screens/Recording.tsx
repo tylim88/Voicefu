@@ -1,4 +1,4 @@
-import { Stack } from '@mantine/core'
+import { Stack, Title } from '@mantine/core'
 import { useState } from 'react'
 import { AudioRecorder } from 'react-audio-voice-recorder'
 import { queryClient } from '~/client'
@@ -17,7 +17,10 @@ export const Recording = ({
     const [url, setURL] = useState<string | null>(null)
     const auth = useFirebaseStore((state) => state.auth)
     return (
-        <Stack align='center' justify='center'>
+        <Stack align='center' justify='center' mb='1.5rem'>
+            <Title mb='1.5rem' align='center'>
+                Translate Your Speech Into Japanese
+            </Title>
             <AudioRecorder
                 onRecordingComplete={async (blob) => {
                     setURL(null)

@@ -127,6 +127,7 @@ export const Home = () => {
                     {token !== undefined ? (
                         <Text>Available Tokens: {token}</Text>
                     ) : null}
+                    <Text>This is an open source project</Text>
                 </Stack>
             ) : (
                 <Login />
