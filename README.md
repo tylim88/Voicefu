@@ -12,6 +12,10 @@ Techs:
 
 [back end code](https://github.com/tylim88/Voicefu-back-end)
 
+Responsive design, works on phone
+
+![phone interface](./phone.jpg)
+
 ## Development Mode
 
 1. Install dependencies with `npm run setup`
