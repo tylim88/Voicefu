@@ -14,7 +14,7 @@ Techs:
 
 Responsive design, works on phone
 
-![phone interface](./phone.jpg =375x667)
+<img src="./phone.jpg" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="200" height="400" />
 
 ## Development Mode
 
