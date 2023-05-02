@@ -12,11 +12,15 @@ Techs:
 
 ## Development Mode
 
-1. This project use Firebase Firestore, please enable it in Firebase Console
-2. Replace `src/firebase_/config.ts` with your Firebase config.
-3. Create a `.env` file at project root and paste `VITE_BASE_URL=http://localhost:3001` into it.
-4. `npm run dev` to see the website on `http://127.0.0.1:5173/`
+1. Install dependencies with `npm run setup`
+1. This project use Firebase Firestore, please enable Firestore in Firebase Console
+1. Replace `src/firebase_/config.ts` with your own Firebase config. (Note: This is not a secret but should move to `.env` file to make environment switching easier)
+1. Create a `.env` file at project root and paste `VITE_BASE_URL=http://localhost:3001` into it.
+1. `npm run dev` to view the website on `http://127.0.0.1:5173/`
+1. For Chrome users, Chrome will block localhost with CORS, please install this [Chrome extension](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) to allow CORS. Please note that, when the add-on is added to your browser, it is inactive by default (toolbar icon is grey C letter). If you want to activate the add-on, please open the toolbar popup and press the toggle button on the left side. The icon will turn to an orange C letter.
 
 ## Production Mode
 
-To be continued
+The repo is ready for production, but you will probably go with your tech stack anyway.
+
+Open an issue if you really need one, and I will complete this read me.
