@@ -14,7 +14,7 @@ Techs:
 
 Responsive design, works on phone
 
-![phone interface](./phone.jpg)
+![phone interface](./phone.jpg =375x667)
 
 ## Development Mode
 
