@@ -1,7 +1,10 @@
 # Voice Synthesis
 
-<video src="https://raw.githubusercontent.com/tylim88/Voicefu/main/demo.mp4" controls="controls" style="max-width: 730px;">
-</video>
+
+
+https://user-images.githubusercontent.com/5227509/235647791-63df3845-fd5e-4f77-a106-149d26622e90.mp4
+
+
 
 This web application translates speech into Japanese speech, try it at [voicefu.com](https://voicefu.com/)
 
