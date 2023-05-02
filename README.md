@@ -1,6 +1,6 @@
 # Voice Synthesis
 
-https://github.com/tylim88/Voicefu/blob/main/demo.mp4
+https://raw.githubusercontent.com/tylim88/Voicefu/main/demo.mp4
 
 This web application translates speech into Japanese speech, try it at [voicefu.com](https://voicefu.com/)
 
