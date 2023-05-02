@@ -20,10 +20,11 @@ Responsive design, works on phone
 
 1. Install dependencies with `npm run setup`
 2. This project use Firebase Firestore, please enable Firestore in Firebase Console
-3. Replace `src/firebase_/config.ts` with your own Firebase config. (Note: This is not a secret but should move to `.env` file to make environment switching easier)
-4. Create a `.env` file at project root and paste `VITE_BASE_URL=http://localhost:3001` into it.
-5. `npm run dev` to view the website on `http://127.0.0.1:5173/`
-6. For Chrome users, Chrome will block localhost with CORS, please install this [Chrome extension](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) to allow CORS. Please note that, when the add-on is added to your browser, it is inactive by default (toolbar icon is grey C letter). If you want to activate the add-on, please open the toolbar popup and press the toggle button on the left side. The icon will turn to an orange C letter.
+3. This project use Firebase Authentication, please enable Google sign in method in Firebase Console
+4. Replace `src/firebase_/config.ts` with your own Firebase config. (Note: This is not a secret but should move to `.env` file to make environment switching easier)
+5. Create a `.env` file at project root and paste `VITE_BASE_URL=http://localhost:3001` into it.
+6. `npm run dev` to view the website on `http://127.0.0.1:5173/`
+7. For Chrome users, Chrome will block localhost with CORS, please install this [Chrome extension](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) to allow CORS. Please note that, when the add-on is added to your browser, it is inactive by default (toolbar icon is grey C letter). If you want to activate the add-on, please open the toolbar popup and press the toggle button on the left side. The icon will turn to an orange C letter.
 
 ## Production Mode
 
