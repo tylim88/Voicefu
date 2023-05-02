@@ -112,9 +112,12 @@ export const Home = () => {
                     />
 
                     {url ? (
-                        <Flex justify='flex-start'>
-                            <audio src={url} controls />
-                        </Flex>
+                        <>
+                            <Text>Translated Speech:</Text>
+                            <Flex justify='flex-start'>
+                                <audio src={url} controls />
+                            </Flex>
+                        </>
                     ) : null}
                     <Text>
                         1000 free tokens every month, 1 token = 0.75 word

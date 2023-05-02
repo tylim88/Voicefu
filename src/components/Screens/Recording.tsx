@@ -1,4 +1,4 @@
-import { Stack, Title } from '@mantine/core'
+import { Stack, Title, Text } from '@mantine/core'
 import { useState } from 'react'
 import { AudioRecorder } from 'react-audio-voice-recorder'
 import { queryClient } from '~/client'
@@ -83,7 +83,12 @@ export const Recording = ({
                     }
                 }}
             />
-            {url ? <audio src={url} controls /> : null}
+            {url ? (
+                <>
+                    <Text>Your Speech:</Text>
+                    <audio src={url} controls />
+                </>
+            ) : null}
         </Stack>
     )
 }
