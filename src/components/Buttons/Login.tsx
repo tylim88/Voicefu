@@ -1,5 +1,5 @@
 import { GoogleLoginButton } from 'react-social-login-buttons'
-import { GoogleAuthProvider, signInWithRedirect } from 'firebase/auth'
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import { useFirebaseStore, useAutoSignInStore } from '~/stores'
 import { notifications } from '@mantine/notifications'
 const provider = new GoogleAuthProvider()
@@ -16,7 +16,7 @@ export const LoginButton = () => {
                 onClick={() => {
                     setAutoSignIn(true)
                     auth &&
-                        signInWithRedirect(auth, provider).catch((err) => {
+                        signInWithPopup(auth, provider).catch((err) => {
                             setAutoSignIn(false)
                             notifications.clean()
                         })
