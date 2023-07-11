@@ -30,7 +30,7 @@
         "@ts-rest/react-query": "^3.18.1",
         "buffer": "^6.0.3",
         "firebase": "^9.17.2",
-        "firelordjs": "^2.4.0",
+        "firelordjs": "^2.6.0-beta.1",
         "localforage": "^1.10.0",
         "react": "^18.2.0",
         "react-audio-voice-recorder": "^1.0.4",
